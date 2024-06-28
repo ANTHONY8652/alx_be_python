@@ -1,11 +1,11 @@
 # daily_reminder.py
 
 # Prompt user for task details
-task = input("Enter the task description: ")
+task = input("Enter your task: ")
 
 # Prompt user for priority level and validate input
 while True:
-    priority = input("Enter the priority level (high, medium, low): ").strip().lower()
+    priority = input("Priority (high/medium/low): ").strip().lower()
     if priority in ["high", "medium", "low"]:
         break
     else:
@@ -13,16 +13,16 @@ while True:
 
 # Prompt user for time-bound status and validate input
 while True:
-    time_bound = input("Is the task time-bound? (yes or no): ").strip().lower()
+    time_bound = input("Is it time-bound? (yes/no): ").strip().lower()
     if time_bound in ["yes", "no"]:
         break
     else:
         print("Invalid input. Please enter 'yes' or 'no'.")
 
 # Construct reminder based on priority and time-bound status
-reminder = f"Task: {task}\nPriority: {priority.capitalize()}"
+reminder = f"'{task}' is a {priority} priority task."
 if time_bound == "yes":
-    reminder += "\nThis task requires immediate attention today!"
+    reminder += " That requires immediate attention today!"
 
 # Print the reminder message
-print(reminder)
+print("Reminder:", reminder)
