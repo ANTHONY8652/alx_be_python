@@ -1,5 +1,5 @@
 #ask for the user to input their current weather conditions
-weather = input("What's the weather like today: (sunny/rainy/cold)? ")
+weather = input("What's the weather like today? (sunny/rainy/cold): ").strip().lower()
 #print what happens if a certain weather condition is selected
 #if weather is sunny print the user to wear a tshirt and sunglasses
 if weather == "sunny":
