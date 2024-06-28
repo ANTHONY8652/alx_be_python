@@ -1,5 +1,3 @@
-#write down the weather conditions
-weather_conditions = ("sunny, rainy, cold")
 #ask for the user to input their current weather conditions
 weather = input("What's the weather like today: (sunny/rainy/cold)? ")
 #print what happens if a certain weather condition is selected
