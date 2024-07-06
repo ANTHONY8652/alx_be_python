@@ -1,0 +1,11 @@
+import main
+x = int(input("Enter x: "))
+y = int(input("Enter y: "))
+result_add = main.add(x, y)
+result_subtract = main.subtraction(x, y)
+result_divide = main.divide(x, y)
+result_multiply = main.multiplication(x, y)
+print(f"{x} + {y} = {result_add}")
+print(f"{x} - {y} = {result_subtract}")
+print(f"{x} * {y} = {result_multiply}")
+print(f"{x} / {y} = {result_divide}")
