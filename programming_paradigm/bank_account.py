@@ -13,10 +13,11 @@ class BankAccount:
         if 0 < amount <= self._account_balance:
             self._account_balance -= amount
             return True
-        return False
+        else:
+            return False
     
     def get_balance(self):
         return self._account_balance
     
     def display_balance(self):
-        print["Current balance is ${self.get_balance()}"]
+        print(f"Current balance is ${self._account_balance:.2f}")
