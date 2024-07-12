@@ -16,23 +16,23 @@ withdraw should deduct the amount from account_balance if funds are sufficient, 
 display_balance should print the current balance in a user-friendly format"""""
 class BankAccount:
     def __init__ (self, initial_balance=0):
-        self.account_balance = initial_balance
+        self._account_balance = initial_balance
     
     
     def deposit(self, amount):
         if amount > 0:
-            self.account_balance += amount
+            self._account_balance += amount
             return True
         return False
     
     def withdraw(self, amount):
-        if 0 < amount <= self.account_balance:
-            self.account_balance -= amount
+        if 0 < amount <= self._account_balance:
+            self._account_balance -= amount
             return True
         return False
     
     def get_balance(self):
-        return self.account_balance
+        return self._account_balance
     
     def display_balance(self):
-        print(f"The current balance is ${self.get_balance()}")
+        print(f"Current balance is ${self.get_balance()}")
