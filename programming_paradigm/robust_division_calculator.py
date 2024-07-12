@@ -1,6 +1,6 @@
 def safe_divide(numerator, denominator):
     try:
-        result = float("numerator") / float("denominator")
+        result = float(numerator) / float(denominator)
     
     except ZeroDivisionError:
         return "Error: cannot divide by zero"
@@ -8,5 +8,5 @@ def safe_divide(numerator, denominator):
     except ValueError:
         return "Error: Please enter numeric values only"
     
-    finally:
-        print(f"The result of the division is {result:.1f}")
+    else:
+        return f"The result of the division is {result}"
