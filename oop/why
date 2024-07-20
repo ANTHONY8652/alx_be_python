@@ -1,3 +1,34 @@
-Book: Pride and Prejudice by Jane Austen
-EBook: Snow Crash by Neal Stephenson, File Size: 500KB
-PrintBook: The Catcher in the Rye by J.D. Salinger, Page Count: 234
+""""
+DEFINE CLASS Shape
+    METHOD area(self)
+        RAISE NotImplementedError "Subclasses must override this method"
+
+DEFINE CLASS Rectangle INHERITS FROM Shape
+    ATTRIBUTE length
+    ATTRIBUTE width
+    
+    METHOD __init__(self, length, width)
+        SET self.length TO length
+        SET self.width TO width
+    
+    METHOD area(self)
+        CALCULATE area USING length * width
+        RETURN area
+
+DEFINE CLASS Circle INHERITS FROM Shape
+    ATTRIBUTE radius
+    
+    METHOD __init__(self, radius)
+        SET self.radius TO radius
+    
+    METHOD area(self)
+        CALCULATE area USING math.pi * radius * radius
+        RETURN area
+
+# Demonstrate polymorphism
+CREATE instance of Rectangle WITH length = 10 AND width = 5
+CREATE instance of Circle WITH radius = 7
+
+PRINT "Rectangle area:", CALL area() METHOD ON Rectangle instance
+PRINT "Circle area:", CALL area() METHOD ON Circle instance 
+"""
